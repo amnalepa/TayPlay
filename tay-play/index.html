@@ -56,6 +56,9 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>https://78.media.tumblr.com/dec39d78cdad346d025a5e68aa4e0f79/tumblr_ne645rgYUN1r5lqijo1_500.gif
         <div class="carousel-inner" role="listbox">
+
+
+
           <!-- Slide One - Set the background image for this slide in the line below -->
           <div class="carousel-item active" style="background-image: url('https://78.media.tumblr.com/dec39d78cdad346d025a5e68aa4e0f79/tumblr_ne645rgYUN1r5lqijo1_500.gif')">
             <div class="carousel-caption d-none d-md-block">
@@ -89,7 +92,7 @@
       </div>
     </header>
 
-    <!-- 
+
     <section class="py-5">
       <div class="container">
         <h1>Full Slider by Start Bootstrap</h1>
@@ -102,10 +105,44 @@
     <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+
+
+        <button onclick="setTimeout(myFunction, 1000);">START THE TIMER</button>
+
+
+        <div id ="content"> </div>
+
+        <script>
+
+              function myFunction(){
+              var rand =  Math.floor(Math.random() * 3 ) + 1;
+
+            if(rand === 1){
+            document.getElementById("content").innerHTML='<iframe width="0%" height="0" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/362721077%3Fsecret_token%3Ds-VqVJq&amp;color=%23ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>';
+
+        }
+
+        if(rand === 2){
+        document.getElementById("content").innerHTML='<iframe width="0%" height="0" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/339400425&amp;color=%23dcd7cc&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>';
+        }
+
+        if(rand === 3){
+        document.getElementById("content").innerHTML='<iframe width="0%" height="0" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/362721077%3Fsecret_token%3Ds-VqVJq&amp;color=%23ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>';
+        }
+
+
+          }
+          setTimeout(myFunction, 40000);
+
+        </script>
+
+
+
+
       </div>
-      //container 
+      //container
     </footer>
-    -->
+
 
 
     <!-- Bootstrap core JavaScript -->
