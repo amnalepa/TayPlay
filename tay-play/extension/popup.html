@@ -1,0 +1,70 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style type="text/css">
+      body {
+        margin: 10px;
+        white-space: nowrap;
+      }
+
+      h1 {
+        font-size: 15px;
+      }
+
+      #container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+    <script src="popup.js"></script>
+  </head>
+
+  <body>
+    <h1>PlayTay
+    </h1>
+    <div id="container">
+<button onclick="setTimeout(myFunction, 1000);">1 Minute until Party!</button>
+        <button onclick="setTimeout(myFunction, 180000);">30 Minutes until Party!</button>
+        <button onclick="setTimeout(myFunction, 3600000);">1hr until Party!</button>
+
+
+        <div id ="content"> </div>
+
+        <script>
+
+              function myFunction(){
+              var rand =  Math.floor(Math.random() * 3 ) + 1;
+
+            if(rand === 1){
+            document.getElementById("content").innerHTML='<iframe width="0%" height="0" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/362721077%3Fsecret_token%3Ds-VqVJq&amp;color=%23ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>';
+
+        }
+
+        if(rand === 2){
+        document.getElementById("content").innerHTML='<iframe width="0%" height="0" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/339400425&amp;color=%23dcd7cc&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>';
+        }
+
+        if(rand === 3){
+        document.getElementById("content").innerHTML='<iframe width="0%" height="0" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/362721077%3Fsecret_token%3Ds-VqVJq&amp;color=%23ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>';
+        }
+
+
+          }
+          setTimeout(myFunction, 40000);
+    </div>
+  </body>
+</html>
