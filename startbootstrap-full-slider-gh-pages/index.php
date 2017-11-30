@@ -34,7 +34,8 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <form  method = "post" action="index.html">
+            <?php
+            echo '<form  method = "post" action="recordvariable.php">
 			 <p> Category: <select name="category">
 			        <option value="0">Choose Frequency</option>
 			        <option value="1">2 Minutes</option>
@@ -43,7 +44,10 @@
 			        </select>
 			        			    
 			    </p>
-            </form>
+            </form>';
+            echo $_POST['category'];
+            ?>
+            
       </div>
     </nav>
 
@@ -97,12 +101,9 @@
       </div>
     </section>
 
-    $category = $_POST['category'];
-    
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-      	<p class="m-0 text-center text-white">Hello $POST_category!</p>
         <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
       </div>
       <!-- /.container -->
